@@ -14,22 +14,27 @@ Let's connect on LinkedIn!
 
 ## 📖 Project Overview
 
-Welcome to second part of my **SQL Data Warehouse and Analytics Project** !
+Welcome to Part 2 of my **SQL Data Warehouse and Analytics Project** !
 
-This analytics project extends the previous SQL Data Warehouse into an analytics layer to answer real business questions. 
+This analytics project builds on the previous [Data Warehouse Project developed in Part 1](https://github.com/faiceps/data-warehouse), 
+extending into a business analytics layer to answer real business questions. 
 
-If you haven't seen the [Part 1 of SQL Data Warehouse Project, click here.](https://github.com/faiceps/data-warehouse)
-
-These scripts cover various analyses such as database exploration, measures and metrics, time-based trends, cumulative analytics, and more.
+In this project, I used SQL-based analytics to explore data, build metrics, and deliver actionable insights that mirror real-world BI use cases.
 
 This project involves:
 
 **A.  Exploratory Data Analysis (EDA)**
-1.  Database exploration.
+1.  Database and schema exploration.
 2.  Dimensions exploration.
-3.  Measures exploration.
-4.  Magnitude analysis.
-5.  Ranking analysis.
+3.  Date range exploration.
+4.  Key measures exploration.
+5.  Magnitude analysis.
+6.  Ranking analysis.
+
+**B.  Advanced Analytics**
+1.  Change over time analysis.
+2.  Cumulative analysis.
+3.  Performance analysis.
 
 As this SQL analytics project is a work in progress, more **advanced analytics** will be performed, such as:
 
@@ -37,7 +42,9 @@ As this SQL analytics project is a work in progress, more **advanced analytics**
 -  Customer report.
 -  Product report.
 
-Without further ado, let's get going!
+This project demonstrates my ability to transform warehouse data into decision-ready insights. 
+
+It showcases skills in SQL analytics, time-series analysis, KPI definition, and BI reporting logic, which are crucial for building dashboards in Power BI and Fabric.
 
 ---
 
