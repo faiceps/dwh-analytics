@@ -1,5 +1,47 @@
 # SQL Data Warehouse and Analytics Project - Part 2: Data Analytics
 
+## 📑 Table of Contents  
+
+- [🌟 About Me](#-about-me)  
+- [📖 Project Overview](#-project-overview)  
+
+- [A. Exploratory Data Analysis (EDA)](#a-exploratory-data-analysis-eda)  
+  - [Script 1. Database and Schema Exploration](#script-1--database-and-schema-exploration)  
+    - [List of all tables in the database](#list-of-all-tables-in-the-database)  
+    - [All columns for a specific table](#all-columns-for-a-specific-table)  
+  - [Script 2. Dimensions Exploration](#script-2--dimensions-exploration)  
+    - [List of unique countries](#list-of-unique-countries-from-which-customers-originate)  
+    - [List of unique categories, subcategories, and products](#list-of-unique-categories-subcategories-and-products---295-unique-rows-returned)  
+  - [Script 3. Date Range Exploration](#script-3--date-range-exploration)  
+    - [First and last order date](#the-first-and-last-order-date-and-the-total-duration-in-months)  
+    - [Youngest and oldest customers](#the-youngest-and-oldest-customer-based-on-birthdate)  
+  - [Script 4. Key Measures Exploration (Key Metrics)](#script-4--key-measures-exploration-key-metrics)  
+    - [Report of key business metrics](#report-that-shows-all-key-metrics-of-the-business)  
+  - [Script 5. Magnitude Analysis](#script-5--magnitude-analysis)  
+    - [Total customers by countries](#total-customers-by-countries)  
+    - [Total customers by gender](#total-customers-by-gender)  
+    - [Total products by category](#total-products-by-category)  
+    - [Average costs by category](#average-costs-in-each-category)  
+    - [Total revenue by category](#total-revenue-generated-for-each-category)  
+    - [Total revenue by customer](#total-revenue-generated-by-each-customer---18484-rows-returned)  
+    - [Distribution of sold items across countries](#the-distribution-of-sold-items-across-countries)  
+  - [Script 6. Ranking Analysis](#script-6--ranking-analysis)  
+    - [Top 5 products by revenue (simple ranking)](#simple-ranking---5-products-generating-the-highest-revenue)  
+    - [Top 5 products by revenue (window functions)](#flexible-ranking-using-window-functions)  
+    - [5 worst-performing products](#5-worst-performing-products-in-terms-of-sales)  
+    - [Top 10 customers by revenue](#top-10-customers-who-have-generated-the-highest-revenue)  
+    - [3 customers with fewest orders](#the-3-customers-with-the-fewest-orders-placed)  
+
+- [B. Advanced Analytics](#b-advanced-analytics)  
+  - [Script 7. Change Over Time Analysis](#script-7--change-over-time-analysis)  
+    - [Analyse sales performance over time (Quick Date Functions)](#analyse-sales-performance-over-time-)  
+    - [Analyse sales performance over time (YYYY-MMM)](#analyse-sales-performance-over-time---order-date-in-yyyy-mmm)  
+  - [Script 8. Cumulative Analysis](#script-8--cumulative-analysis)  
+    - [Running total of sales and moving average](#total-sales-per-month-and-the-running-total-of-sales-over-time)  
+  - [Script 9. Performance Analysis (YoY, MoM)](#script-9--performance-analysis-year-over-year-month-over-month)  
+    - [Year-over-Year Analysis](#year-over-year-analysis)  
+    - [Month-over-Month Analysis](#month-over-month-analysis)  
+
 ## 🌟 About Me
 
 Hey, I'm **JunFai Kan**. I’m a Master of Data Science graduate passionate in pursuing my career in data engineering !
@@ -20,21 +62,6 @@ This analytics project builds on the previous [Data Warehouse Project developed 
 extending into a business analytics layer to answer real business questions. 
 
 In this project, I used SQL-based analytics to explore data, build metrics, and deliver actionable insights that mirror real-world BI use cases.
-
-This project involves:
-
-**A.  Exploratory Data Analysis (EDA)**
-1.  Database and schema exploration.
-2.  Dimensions exploration.
-3.  Date range exploration.
-4.  Key measures exploration.
-5.  Magnitude analysis.
-6.  Ranking analysis.
-
-**B.  Advanced Analytics**
-1.  Change over time analysis.
-2.  Cumulative analysis.
-3.  Performance analysis.
 
 As this SQL analytics project is a work in progress, more **advanced analytics** will be performed, such as:
 
@@ -72,7 +99,7 @@ SELECT
     TABLE_TYPE
 FROM INFORMATION_SCHEMA.TABLES;
 ```
-List of all tables in the database:
+#### List of all tables in the database:
 
 <img width="538" height="387" alt="image" src="https://github.com/user-attachments/assets/e428dcec-3a77-45a0-9bc9-8bc4666cd468" />
 
@@ -86,7 +113,7 @@ SELECT
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'dim_customers';
 ```
-All columns for a specific table (dim_customers):
+#### All columns for a specific table:
 
 <img width="619" height="266" alt="image" src="https://github.com/user-attachments/assets/75d150a1-2148-46b6-87bb-0666dfadeca1" />
 
@@ -484,7 +511,7 @@ WHERE order_date IS NOT NULL
 GROUP BY YEAR(order_date), MONTH(order_date)
 ORDER BY YEAR(order_date), MONTH(order_date);
 ```    
-Analyse sales performance over time - Quick Date Functions :
+#### Analyse sales performance over time :
 
 <img width="516" height="743" alt="image" src="https://github.com/user-attachments/assets/03724ded-23c7-4ea0-9176-8be670c4303c" />
 
@@ -500,7 +527,7 @@ WHERE order_date IS NOT NULL
 GROUP BY FORMAT(order_date, 'yyyy-MMM')
 ORDER BY FORMAT(order_date, 'yyyy-MMM');
 ```
-Analyse sales performance over time - Order Date in YYYY-MMM:
+#### Analyse sales performance over time - Order Date in YYYY-MMM:
 
 <img width="425" height="745" alt="image" src="https://github.com/user-attachments/assets/c494dd60-62b6-40b2-86ab-b46f6da6ea3f" />
 
@@ -539,7 +566,7 @@ FROM
     GROUP BY DATETRUNC(year, order_date)
 ) t
 ```
-Total sales per month and the running total of sales over time: 
+#### Total sales per month and the running total of sales over time: 
 
 <img width="512" height="148" alt="Screenshot 2025-09-18 012705" src="https://github.com/user-attachments/assets/3436e479-8998-4b89-9a92-326ebbdf35f2" />
 
@@ -599,7 +626,7 @@ SELECT
 FROM yearly_product_sales
 ORDER BY product_name, order_year;
 ```    
-**Year-over-Year Analysis** 
+#### **Year-over-Year Analysis** 
 
 Yearly performance of products by comparing each product's sales to both its average sales performance and the previous year's sales:
 
@@ -642,7 +669,7 @@ FROM monthly_product_sales
 ORDER BY product_name, order_month
 ;
 ```
-**Month-over-Month Analysis** 
+#### **Month-over-Month Analysis** 
 
 Monthly performance of products by comparing each product's sales to both its average sales performance and the previous month's sales:
 
