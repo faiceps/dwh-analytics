@@ -48,3 +48,128 @@ It showcases skills in SQL analytics, time-series analysis, KPI definition, and 
 
 ---
 
+## A. Exploratory Data Analysis (EDA)
+
+### Script 1.  Database and schema exploration.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+Purpose:
+    - To explore the structure of the database, including the list of tables and their schemas.
+    - To inspect the columns and metadata for specific tables.
+
+Table Used:
+    - INFORMATION_SCHEMA.TABLES
+    - INFORMATION_SCHEMA.COLUMNS
+
+```sql
+
+```    
+
+---
+
+### Script 2.  Dimensions exploration.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+```sql
+
+```
+  
+---
+
+### Script 3.  Date range exploration.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+```sql
+
+```
+  
+---
+
+### Script 4.  Key measures exploration.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+```sql
+
+```
+  
+---
+
+### Script 5.  Magnitude analysis.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+```sql
+
+```
+  
+---
+
+### Script 6.  Ranking analysis.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+```sql
+
+```
+  
+---
+
+## B. Advanced Analytics
+
+### Script 7.  Database and schema exploration.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+Purpose:
+    - To explore the structure of the database, including the list of tables and their schemas.
+    - To inspect the columns and metadata for specific tables.
+
+Table Used:
+    - INFORMATION_SCHEMA.TABLES
+    - INFORMATION_SCHEMA.COLUMNS
+
+```sql
+
+```    
+
+---
+
+### Script 8.  Database and schema exploration.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+Purpose:
+    - To explore the structure of the database, including the list of tables and their schemas.
+    - To inspect the columns and metadata for specific tables.
+
+Table Used:
+    - INFORMATION_SCHEMA.TABLES
+    - INFORMATION_SCHEMA.COLUMNS
+
+```sql
+
+```    
+
+---
+
+### Script 9.  Database and schema exploration.
+
+Script: [database-exploration.sql](scripts/database-exploration.sql)
+
+Purpose:
+    - To explore the structure of the database, including the list of tables and their schemas.
+    - To inspect the columns and metadata for specific tables.
+
+Table Used:
+    - INFORMATION_SCHEMA.TABLES
+    - INFORMATION_SCHEMA.COLUMNS
+
+```sql
+
+```    
+
+---
